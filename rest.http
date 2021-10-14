@@ -1,0 +1,26 @@
+// Register a new user. All fields are required.
+POST http://localhost:3000/users/register
+    Content-Type: application/json
+
+    {
+      "first_name": "Bob",
+      "last_name": "Smith",
+      "email": "bsmith@example.com",
+      "password": "password"
+    }
+
+###
+
+// Login user. Email and pw are required.
+POST http://localhost:3000/users/login
+    Content-Type: application/json
+
+    {
+      "email": "bsmith@example.com",
+      "password": "password"
+    }
+
+###
+
+// List all users, no auth required but we could add that with AuthService on the route.
+GET http://localhost:3000/users/list

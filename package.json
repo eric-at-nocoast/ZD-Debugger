@@ -1,0 +1,28 @@
+{
+  "name": "prisma-api-crud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^3.2.1",
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "http-errors": "^1.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13",
+    "prisma": "^3.2.1"
+  }
+}
