@@ -7,7 +7,7 @@ const accessTokenSecret = process.env.ACCESS_TOKEN_SECRET;
 
 module.exports = {
 	signAccessToken(payload) {
-		return jwt.sign(payload, accessTokenSecret, {expiresIn: '3600s'});
+		return jwt.sign({payload}, accessTokenSecret, { expiresIn: '1h' });
 	},
 	
 	verifyAccessToken(token) {
