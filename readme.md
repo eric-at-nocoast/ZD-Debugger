@@ -34,7 +34,7 @@ ACCESS_TOKEN_SECRET= WHATEVER YOU WANT!
 5. `npm run dev` to start up the server
 
 ### Work with the app hosted on [Glitch](https://glitch.com)
-1. Click this [link]() To make your own copy of the project
+1. Click this [link](https://glitch.com/edit/#!/remix/speckled-flax-sunstone) To make your own copy of the project
 2. Go to the .env file and add the following into it: 
 ```
 DATABASE_URL=file:./users.db
