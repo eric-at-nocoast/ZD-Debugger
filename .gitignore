@@ -107,3 +107,7 @@ dist
 ./prisma/users.db
 prisma/users.db
 prisma/db
+
+#vscode settings
+
+.vscode

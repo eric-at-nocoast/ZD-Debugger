@@ -7,16 +7,9 @@ const accessTokenSecret = process.env.ACCESS_TOKEN_SECRET;
 
 module.exports = {
 	signAccessToken(payload) {
-		return new Promise((resolve, reject) => {
-			jwt.sign({ payload }, accessTokenSecret, {}, (err, token) => {
-				if (err) {
-					reject(createError.InternalServerError());
-				}
-				resolve(token);
-			});
-		});
+		return jwt.sign(payload, accessTokenSecret, {expiresIn: '3600s'});
 	},
-
+	
 	verifyAccessToken(token) {
 		return new Promise((resolve, reject) => {
 			jwt.verify(token, accessTokenSecret, (err, payload) => {

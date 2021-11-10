@@ -10,7 +10,7 @@ class AuthService {
 		let user = await prisma.users.create({
 			data,
 		});
-		data.accessToken = await jwt.signAccessToken(user);
+		data.accessToken = await jwt.signAccessToken(user.email);
 		return data;
 	}
 
@@ -32,7 +32,7 @@ class AuthService {
 				'Login info is incorrect. Please try again.'
 			);
 		delete user.password;
-		const accessToken = await jwt.signAccessToken(user);
+		const accessToken = await jwt.signAccessToken(user.email);
 		return { ...user, accessToken };
 	}
 
