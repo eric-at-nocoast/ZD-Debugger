@@ -11,6 +11,9 @@
   "keywords": [],
   "author": "eric-at-zd",
   "license": "MIT",
+  "engines": {
+    "node": "16.x"
+  },
   "dependencies": {
     "@prisma/client": "^3.2.1",
     "bcrypt": "^5.0.1",
