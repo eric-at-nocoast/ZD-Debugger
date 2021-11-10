@@ -25,8 +25,21 @@ We will continue to add more features to this, so stay tuned!
 1. Clone the repository to your local
 2. `npm install` to install all of the dependencies
 3. `npx prisma migrate dev --name init` to set up the SQLite database
-4. `npm run dev` to start up the server
+4. Create a .env file and add the following into it: 
+```
+DATABASE_URL=file:./users.db
+PORT= WHATEVER PORT YOU WANT!
+ACCESS_TOKEN_SECRET= WHATEVER YOU WANT!
+```
+5. `npm run dev` to start up the server
 
 ### Work with the app hosted on [Glitch](https://glitch.com)
 1. Click this [link]() To make your own copy of the project
-2. Click "Tools" then "Terminal" and use the command `npx prisma migrate dev --name init` to set up the SQLite database
+2. Go to the .env file and add the following into it: 
+```
+DATABASE_URL=file:./users.db
+PORT= WHATEVER PORT YOU WANT!
+ACCESS_TOKEN_SECRET= WHATEVER YOU WANT!
+```
+3. Click "Tools" then "Terminal" and use the command `npx prisma migrate dev --name init` to set up the SQLite database
+4. You're all set! 
