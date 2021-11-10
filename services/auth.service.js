@@ -6,13 +6,11 @@ const prisma = new PrismaClient();
 
 class AuthService {
 	static async register(data) {
-		const { email } = data;
 		data.password = bcrypt.hashSync(data.password, 8);
-		let user = prisma.users.create({
+		let user = await prisma.users.create({
 			data,
 		});
 		data.accessToken = await jwt.signAccessToken(user);
-
 		return data;
 	}
 
@@ -38,9 +36,10 @@ class AuthService {
 		return { ...user, accessToken };
 	}
 
-	static async all() {
-		const allUsers = await prisma.users.findMany();
-		return allUsers;
-	}
+    static async someUsers() {
+        const Users = await prisma.users.findMany();
+        return Users;
+    }
 }
+
 module.exports = AuthService;

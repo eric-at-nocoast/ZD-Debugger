@@ -1,18 +1,10 @@
 const router = require('express').Router();
-const user = require('../controllers/auth.controller');
-const auth = require('../middlewares/auth');
+const user = require('../controllers/user.controller');
+const auth = require('../controllers/auth.controller');
 
-router.get('/', async (req, res, next) => {
-	res.send({ message: 'Users api is working 🚀' });
-});
 
-// Create new user
-router.post('/register', user.register);
+router.get('/', user.someUsers);
+router.post('/', auth.register);
+router.delete('/', user.deleteUser);
 
-// Login user
-router.post('/login', user.login);
-
-// List all users
-router.get('/list', user.all);
-
-module.exports = router;
+module.exports = router
