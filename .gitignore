@@ -106,3 +106,4 @@ dist
 #User database
 ./prisma/users.db
 prisma/users.db
+prisma/db
